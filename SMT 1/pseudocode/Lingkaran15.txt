@@ -1,0 +1,15 @@
+Algoritma : Lingkaran15
+
+{dibaca jari-jari dari piranti masukan. Hitunglah keliling dan luas lingkaran tersebut}
+
+Deklarasi:
+r               : int
+keliling,luas   : double
+
+Deskripsi:
+1. print "masukkan jari-jari lingkaran!"
+2. read r
+3. keliling = 2*3.14*r
+5. luas = 3.14*r*r
+4. print keliling
+6. print luas

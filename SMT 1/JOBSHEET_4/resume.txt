@@ -1,0 +1,15 @@
+Pseudocode adalah deskripsi tingkat tinggi dari algoritma pemograman dengan notasi yang mirip dengan kode pemograman.
+Pseudocode digunakan untuk menjelaskan langkah-langkah penyelesaian masalah yang mudah dipahami manusia.
+Menggunakan bahasa Indonesia atau inggris sederhana
+Syntax dipakai untuk menjelaskan perintah.
+Syntax : Input
+         Output
+         Compute
+         Store
+         Compare
+         Loop
+
+Flowchart adalah sebuah bagan dengan simbol tertentu
+Fungsinya untuk menjelaskan urutan proses dan hubungan antar proses lainnya pada sebuah program.
+Dibagi menjadi 2 macam : System Flowchart (urutan proses menunjukkan alat media input dan output)
+                         Program Flowchart (urutan instruksi menggunakan symbol)

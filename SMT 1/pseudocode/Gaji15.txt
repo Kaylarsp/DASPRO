@@ -1,0 +1,14 @@
+Algoritma Gaji15
+{dibaca Gaji dari piranti masukan. Hitunglah jumlah total gaji}
+
+Deklarasi:
+jmlMasuk, jmlTdkMsk, totalGaji : int
+gaji = 40000, potGaji = 25000  : int
+
+Deklarasi:
+1. print "masukkan jumlah masuk"
+2. read jmlMasuk
+3. print "masukkan jumlah tidak masuk"
+4. read jmlTdkMsk
+5. totalGaji = (jmlMasuk*gaji) - (jmlTdkMsk*potGaji)
+6. print totalGaji
