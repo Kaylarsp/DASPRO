@@ -77,6 +77,6 @@ public class tugas215 {
         System.out.print("Masukkan jarak (m)       : ");
         int s = sc.nextInt();
         double t = s / v;
-        System.out.println("Waktu yang dibutuhkan  : " + t + " s");
+        System.out.println("Waktu yang dibutuhkan    : " + t + " s");
     }
 }
