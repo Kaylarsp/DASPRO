@@ -5,9 +5,9 @@ public class tugas115 {
         Scanner sc = new Scanner(System.in);
         char[] kode = { 'A', 'B', 'D', 'E', 'F', 'G', 'H', 'L', 'N', 'T' };
         String[] kota = {
-            "Bandung",
+            "Banten",
             "Jakarta",
-            "Bandar Lampung",
+            "Bandung",
             "Cirebon",
             "Bogor",
             "Pekalongan",
