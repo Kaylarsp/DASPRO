@@ -15,9 +15,9 @@ public class buku15 {
     }
 
     void tampilInformasi() {
-        System.out.println("Judul          : " + judul);
+        System.out.println("\nJudul          : " + judul);
         System.out.println("Pengarang      : " + pengarang);
-        System.out.println("Jumla halaman : " + halaman);
+        System.out.println("Jumlah halaman : " + halaman);
         System.out.println("Sisa stok      : " + stok);
         System.out.println("Harga          : " + halaman);
     }
