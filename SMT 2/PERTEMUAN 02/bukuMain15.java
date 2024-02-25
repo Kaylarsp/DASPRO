@@ -17,5 +17,13 @@ public class bukuMain15 {
         buku15 bk2 = new buku15("Self Reward", "Maheera Ayesha", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+        // membuat objek baru dg nama saya
+        buku15 bukuKayla = new buku15("Tentang Kamu", "Tere Liye", 503, 30, 85000);
+        bukuKayla.tampilInformasi();
+        bukuKayla.terjual(23);
+        bukuKayla.tampilInformasi();
+        bukuKayla.restock(100);
+        bukuKayla.tampilInformasi();
     }
 }

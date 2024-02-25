@@ -19,17 +19,17 @@ public class buku15 {
         System.out.println("Pengarang      : " + pengarang);
         System.out.println("Jumlah halaman : " + halaman);
         System.out.println("Sisa stok      : " + stok);
-        System.out.println("Harga          : " + halaman);
+        System.out.println("Harga          : " + harga);
     }
 
     void terjual(int jml) {
-        stok -= jml;
-    }
-
-    void restock(int jml) {
         if (stok > 0) {
             stok -= jml;
         }
+    }
+
+    void restock(int jml) {
+        stok += jml;
     }
 
     void gantiHarga(int hrg) {
