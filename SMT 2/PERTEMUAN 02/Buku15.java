@@ -6,12 +6,12 @@ public class buku15 {
 
     }
 
-    public buku15(String j, String p, int hal, int s, int h) {
-        judul = j;
-        pengarang = p;
+    public buku15(String jud, String pg, int hal, int stok, int har) {
+        judul = jud;
+        pengarang = pg;
         halaman = hal;
-        stok = s;
-        harga = h;
+        this.stok = stok; // menggunakan this karena parameter sm atribut sm
+        harga = har;
     }
 
     void tampilInformasi() {
