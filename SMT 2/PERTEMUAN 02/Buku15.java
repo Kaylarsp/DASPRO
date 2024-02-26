@@ -1,6 +1,7 @@
 public class buku15 {
     String judul, pengarang;
     int halaman, stok, harga;
+    double hargaTotal, diskon;
 
     public buku15() {
 
@@ -34,5 +35,22 @@ public class buku15 {
 
     void gantiHarga(int hrg) {
         harga = hrg;
+    }
+
+    void hitungHargaTotal(int jml) {
+        hargaTotal = harga * jml;
+    }
+
+    void hitungDiskon() {
+        if (hargaTotal > 150000) {
+            diskon = hargaTotal * 0.12;
+        } else if (hargaTotal >= 75000 && hargaTotal <= 150000) {
+            diskon = hargaTotal * 0.05;
+        }
+    }
+
+    void hitungHargaBayar() {
+        hitungDiskon();
+        hargaTotal -= diskon;
     }
 }
