@@ -45,4 +45,8 @@ public class dragon15 {
             System.exit(0);
         }
     }
+
+    void printPosition() {
+        System.out.printf("x : %d\ny : %d", x, y);
+    }
 }
