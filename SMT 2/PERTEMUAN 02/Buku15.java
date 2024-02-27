@@ -20,7 +20,9 @@ public class buku15 {
         System.out.println("Pengarang      : " + pengarang);
         System.out.println("Jumlah halaman : " + halaman);
         System.out.println("Sisa stok      : " + stok);
-        System.out.println("Harga          : " + harga);
+        System.out.println("Harga total    : Rp." + hargaTotal);
+        System.out.println("Harga diskon   : Rp." + diskon);
+        System.out.println("Harga bayar    : Rp." + hargaBayar);
     }
 
     void terjual(int jml) {
@@ -49,8 +51,10 @@ public class buku15 {
         }
     }
 
+    double hargaBayar;
+
     void hitungHargaBayar() {
         hitungDiskon();
-        hargaTotal -= diskon;
+        hargaBayar = hargaTotal - diskon;
     }
 }
