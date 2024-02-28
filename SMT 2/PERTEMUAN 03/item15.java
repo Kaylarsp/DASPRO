@@ -3,7 +3,7 @@ public class item15 {
     public double price;
     public int stock;
 
-    
+
 
     public void displayInfo() {
         System.out.println();
