@@ -9,13 +9,10 @@ class persegiPanjangDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Modifikasi kode program agar length array menjadi inputan
-        System.out.print("\nMasukkan panjang array : ");
-        int n = sc.nextInt();
-        persegiPanjang15[] arrayOfPersegiPanjang = new persegiPanjang15[n];
+        persegiPanjang15[] arrayOfPersegiPanjang = new persegiPanjang15[3];
         
         // menerima input
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < 3; i++) {
             arrayOfPersegiPanjang[i] = new persegiPanjang15();
             System.out.println("\nPersegi panjang ke-" + i);
             System.out.print("Masukkan panjang : ");
@@ -25,7 +22,7 @@ class persegiPanjangDemo {
         }
 
         // mengakses isi array arrayOfPersegiPanjang dan menampilkannya
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < 3; i++) {
             System.out.println("\nPersegi panjang ke-" + i);
             System.out.println("Panjang : " + arrayOfPersegiPanjang[i].panjang + "\nLebar   : " + arrayOfPersegiPanjang[i].lebar);
         }
@@ -42,9 +39,9 @@ class persegiPanjangDemo {
         arrayOfPersegiPanjang[2].panjang = 100;
         arrayOfPersegiPanjang[2].lebar = 20;
 
-        System.out.println();
-        System.out.println("Persegi panjang ke-0, panjang : " + arrayOfPersegiPanjang[0].panjang + ", lebar : " + arrayOfPersegiPanjang[0].lebar);
-        System.out.println("Persegi panjang ke-1, panjang :  " + arrayOfPersegiPanjang[1].panjang + ", lebar : " + arrayOfPersegiPanjang[1].lebar);
-        System.out.println("Persegi panjang ke-2, panjang : " + arrayOfPersegiPanjang[2].panjang + ", lebar : " + arrayOfPersegiPanjang[2].lebar);
+        // System.out.println();
+        // System.out.println("Persegi panjang ke-0, panjang : " + arrayOfPersegiPanjang[0].panjang + ", lebar : " + arrayOfPersegiPanjang[0].lebar);
+        // System.out.println("Persegi panjang ke-1, panjang :  " + arrayOfPersegiPanjang[1].panjang + ", lebar : " + arrayOfPersegiPanjang[1].lebar);
+        // System.out.println("Persegi panjang ke-2, panjang : " + arrayOfPersegiPanjang[2].panjang + ", lebar : " + arrayOfPersegiPanjang[2].lebar);
     }
 }
