@@ -14,8 +14,7 @@ public class persegiPanjang15 {
     // mengakses isi array arrayOfPersegiPanjang dan menampilkannya
     public void cetakInfo(persegiPanjang15[] arrayOfPersegiPanjang) {
         for (int i = 0; i < 3; i++) {
-            System.out.println("\nPersegi panjang ke-" + i);
-            System.out.println("Panjang : " + arrayOfPersegiPanjang[i].panjang + "\nLebar   : " + arrayOfPersegiPanjang[i].lebar);
+            System.out.println("\nPersegi panjang ke-" + (i + 1) + ", Panjang : " + arrayOfPersegiPanjang[i].panjang + ", Lebar   : " + arrayOfPersegiPanjang[i].lebar);
         }
     }
 }

@@ -10,7 +10,7 @@ public class persegiPanjangDemo15 {
         // menerima input
         for (int i = 0; i < 3; i++) {
             arrayOfPersegiPanjang[i] = new persegiPanjang15();
-            System.out.println("\nPersegi panjang ke-" + i);
+            System.out.println("\nPersegi panjang ke-" + (i+1));
             System.out.print("Masukkan panjang : ");
             panjang = sc.nextInt();
             System.out.print("Masukkan lebar   : ");
