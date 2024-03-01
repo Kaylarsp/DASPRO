@@ -17,7 +17,7 @@ public class tugas1_15 {
             System.out.print("Masukkan Jenis kelamin : ");
             dataMhs[i].gender = sc.next();
             System.out.print("Masukkan Nilai IPK     : ");
-            dataMhs[i].ipk = sc.next();
+            dataMhs[i].ipk = sc.nextDouble();
         }
 
         for (int i = 0; i < n; i++) {
@@ -27,12 +27,9 @@ public class tugas1_15 {
             System.out.println("Jenis kelamin : " + dataMhs[i].gender);
             System.out.println("Nilai IPK     : " + dataMhs[i].ipk);
         }
-    }
-}
 
-class Mahasiswa {
-    public String nama;
-    public String nim;
-    public String gender;
-    public String ipk;
+        // memanggil method calculateAvg
+        Mahasiswa.calculateAvg(dataMhs);
+        System.out.printf("\nRata-rata IPK : %.2f%n", Mahasiswa.avgIpk);
+    }
 }
