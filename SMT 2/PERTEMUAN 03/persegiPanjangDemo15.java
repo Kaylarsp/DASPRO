@@ -4,13 +4,16 @@ public class persegiPanjangDemo15 {
         public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        persegiPanjang15[] arrayOfPersegiPanjang = new persegiPanjang15[3];
+        // menerima inputan panjang array
+        System.out.print("\nMasukkan panjang array : ");
+        int n = sc.nextInt();
+        persegiPanjang15[] arrayOfPersegiPanjang = new persegiPanjang15[n];
         int panjang, lebar;
         
         // menerima input
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < arrayOfPersegiPanjang.length; i++) {
             arrayOfPersegiPanjang[i] = new persegiPanjang15();
-            System.out.println("\nPersegi panjang ke-" + (i+1));
+            System.out.println("\nPersegi panjang ke-" + (i + 1));
             System.out.print("Masukkan panjang : ");
             panjang = sc.nextInt();
             System.out.print("Masukkan lebar   : ");

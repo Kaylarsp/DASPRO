@@ -13,7 +13,7 @@ public class persegiPanjang15 {
 
     // mengakses isi array arrayOfPersegiPanjang dan menampilkannya
     public void cetakInfo(persegiPanjang15[] arrayOfPersegiPanjang) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < arrayOfPersegiPanjang.length; i++) {
             int luas = hitungLuas(arrayOfPersegiPanjang[i].panjang, arrayOfPersegiPanjang[i].lebar);
             int keliling = hitungKeliling(arrayOfPersegiPanjang[i].panjang, arrayOfPersegiPanjang[i].lebar);
             System.out.println("\nPersegi panjang ke-" + (i + 1)
