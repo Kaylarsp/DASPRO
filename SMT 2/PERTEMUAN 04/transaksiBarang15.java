@@ -17,22 +17,23 @@ public class transaksiBarang15 {
     }
 
     public void tampilkanBarang() {
-        System.out.println("Daftar Barang:");
-        System.out.println("-------------------");
+        System.out.println("-------------------------------------------");
+        System.out.println("              Daftar Barang                ");
+        System.out.println("-------------------------------------------");
         System.out.printf("%-6s %-12s %-8s %s\n", "Kode", "Nama Barang", "Stok", "Harga");
         for (barang15 barang : barangs) {
-            System.out.printf("%-6s %-12s %-8d Rp. %d\n" + barang.getKodeBarang(), barang.getNamaBarang(), barang.getStok(), barang.getHargaSatuan());
+            System.out.printf("%-6s %-12s %-8d Rp. %d\n" , barang.getKodeBarang(), barang.getNamaBarang(), barang.getStok(), barang.getHargaSatuan());
         }
-        System.out.println("-------------------");
+        System.out.println("-------------------------------------------");
     }
 
     public void tampilkanBarangPembelian() {
         System.out.println("Daftar Barang Pembelian:");
-        System.out.println("-------------------");
+        System.out.println("------------------------------");
         for (barang15 barang : pembelians) {
             System.out.printf("%s - %s (%d) - Rp. %d\n", barang.getKodeBarang(), barang.getNamaBarang(), barang.getStok(), barang.getHargaSatuan());
         }
-        System.out.println("-------------------");
+        System.out.println("------------------------------");
     }
 
     public void melakukanPembelian(String kodeBarang) {
@@ -48,6 +49,7 @@ public class transaksiBarang15 {
                 return;
             }
         }
+        System.out.println("------------------------------");
         System.out.println("Barang tidak ditemukan");
     }
 }

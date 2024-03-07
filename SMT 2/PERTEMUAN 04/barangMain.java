@@ -6,7 +6,8 @@ public class barangMain {
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println();
-            System.out.println("TOKO ATK KAYLA");
+            System.out.println("------------------------------");
+            System.out.println("         TOKO ATK KAYLA       ");
             System.out.println("------------------------------");
             System.out.println("1. Tampilkan Daftar Barang");
             System.out.println("2. Melakukan Pembelian");
