@@ -8,6 +8,7 @@ public class Sum15 {
         this.keuntungan = new double[elemen];
         this.total = 0;
     }
+    
     double totalBF(double arr[]) {
         for (int i = 0; i < elemen; i++) {
             total = total + arr[i];
