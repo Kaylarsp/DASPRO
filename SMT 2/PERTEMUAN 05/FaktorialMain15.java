@@ -1,3 +1,4 @@
+import java.util.Date;
 import java.util.Scanner;
 
 public class FaktorialMain15 {
@@ -16,12 +17,18 @@ public class FaktorialMain15 {
         System.out.println("===================================================");
         System.out.println("Hasil Faktorial dengan Brute Force");
         for (int i = 0; i < elemen; i++) {
+            long startTime = new Date().getTime();
+            long endTime = new Date().getTime();
             System.out.println("Faktorial dari nilai " + fk[i].nilai + " adalah : " + fk[i].faktorialBF(fk[i].nilai));
+            System.out.println("Waktu eksekusi: " + (endTime - startTime) + " ms");
         }
         System.out.println("===================================================");
         System.out.println("Hasil Faktorial dengan Divide and Conquer");
         for (int i = 0; i < elemen; i++) {
+            long startTime = new Date().getTime();
+            long endTime = new Date().getTime();
             System.out.println("Faktorial dari nilai " + fk[i].nilai + " adalah : " + fk[i].faktorialDC(fk[i].nilai));
+            System.out.println("Waktu eksekusi: " + (endTime - startTime) + " ms");
         }
         System.out.println("===================================================");
     }
