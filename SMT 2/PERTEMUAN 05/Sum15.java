@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Sum15 {
     public int elemen;
     public double keuntungan[];
@@ -26,5 +28,10 @@ public class Sum15 {
             return lsum + rsum + arr[mid];
         }
         return 0;
+    }
+
+    public String formatDouble(double number) {
+        DecimalFormat df = new DecimalFormat("#.##");
+        return df.format(number);
     }
 }

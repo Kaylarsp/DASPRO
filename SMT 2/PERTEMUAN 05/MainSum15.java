@@ -17,9 +17,13 @@ public class MainSum15 {
 
         System.out.println("===============================================================");
         System.out.println("Algoritma Brute Force");
-        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah : " + sm.totalBF(sm.keuntungan));
+        double formattedBF = Double.parseDouble(sm.formatDouble(sm.totalBF(sm.keuntungan)));
+        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah : " + formattedBF);
+        // System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah : " + sm.totalBF(sm.keuntungan));
         System.out.println("===============================================================");
         System.out.println("Algoritma Divide and Conquer");
-        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah : " + sm.totalDC(sm.keuntungan, 0, sm.elemen - 1));
+        // System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah : " + sm.totalDC(sm.keuntungan, 0, sm.elemen - 1));
+        double formattedDC = Double.parseDouble(sm.formatDouble(sm.totalDC(sm.keuntungan, 0, sm.elemen-1)));
+        System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah : " + formattedDC);
     }
 }
