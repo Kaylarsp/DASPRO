@@ -6,14 +6,18 @@ public class MahasiswaMain15 {
         sorting15.sequentialSearch(daftarNilai, 5);
         Scanner s = new Scanner(System.in);
         Scanner s1 = new Scanner(System.in);
+        int jumMhs;
 
-        PencarianMhs15 data = new PencarianMhs15();
-        int jumMhs = 5;
+        System.out.println("---------------------------------------------------------");
+        System.out.print("Masukkan berapa banyak data yang ingin ditambahkan : ");
+        jumMhs = s.nextInt();
 
-        System.out.println("------------------------------------------");
+        PencarianMhs15 data = new PencarianMhs15(jumMhs);
+        System.out.println("---------------------------------------------------------");
         System.out.println("Masukkan data mahasiswa secara urut dari nim terkecil");
+        
         for (int i = 0; i < jumMhs; i++) {
-            System.out.println("------------------------------");
+            System.out.println("---------------------------------------------------------");
             System.out.print("Nim\t: ");
             int nim = s.nextInt();
             System.out.print("Nama\t: ");
@@ -27,27 +31,35 @@ public class MahasiswaMain15 {
             data.tambah(m);
         }
 
-            System.out.println("------------------------------------------");
+            System.out.println("---------------------------------------------------------");
             System.out.println("Data keseluruhan mahasiswa : ");
             data.tampil();
 
-            System.out.println("__________________________________________");
-            System.out.println("__________________________________________");
+            System.out.println("_________________________________________________________");
+            System.out.println("_________________________________________________________");
             System.out.println("Pencarian data : ");
-            System.out.println("Masukkan nim mahasiswa yang dicari : ");
-            System.out.println("NIM : ");
-            int cari = s.nextInt();
-            System.out.println("==========================================");
-            System.out.println("Menggunakan sequential search");
-            int posisi = data.FindSeqSearch(cari);
+            System.out.print("Masukkan nama mahasiswa yang dicari : ");
+            String cari = s.next();
 
-            data.TampilPosisi(cari, posisi);
-            data.TampilData(cari, posisi);
+            // System.out.print("NIM : ");
+            // int cari = s.nextInt();
+            // System.out.println("=========================================================");
+            // System.out.println("Menggunakan sequential search");
+            // int posisi = data.FindSeqSearch(cari);
 
-            System.out.println("==========================================");
+            // data.TampilPosisi(cari, posisi);
+            // data.TampilData(cari, posisi);
+
+            System.out.println("=========================================================");
             System.out.println("Menggunakan binary search");
-            posisi = data.FindBinarySearch(cari, 0, jumMhs - 1);
-            data.TampilPosisi(cari, posisi);
-            data.TampilData(cari, posisi);
+
+            data.countSearchName(cari);
+            int posisi = data.FindBinarySearchByName(cari, 0, jumMhs - 1, 0);
+            data.TampilposisiNama(cari, posisi);
+            data.TampilDataNama (cari, posisi);
+
+            // posisi = data.FindBinarySearch(cari, 0, jumMhs - 1);
+            // data.TampilPosisi(cari, posisi);
+            // data.TampilData(cari, posisi);
     }
 }
