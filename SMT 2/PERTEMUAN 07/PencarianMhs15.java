@@ -31,17 +31,6 @@ public class PencarianMhs15 {
 
     public int FindBinarySearch(int cari, int left, int right) {
         int mid;
-        // if (right >= left) {
-        //     mid = (left + right) / 2;
-        //     if (cari == listMhs[mid].nim) {
-        //         return (mid);
-        //     } else if (listMhs[mid].nim > cari) {
-        //         return FindBinarySearch(cari, left, mid - 1);
-        //     } else {
-        //         return FindBinarySearch(cari, mid + 1, right);
-        //     }
-        // }
-        // return - 1;
         if (right >= left) {
             mid = left + (right - left) / 2;
             if (cari == listMhs[mid].nim) {
