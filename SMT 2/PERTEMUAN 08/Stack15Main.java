@@ -13,7 +13,8 @@ public class Stack15Main {
             System.out.println("2. Pop");
             System.out.println("3. Peek");
             System.out.println("4. Print");
-            System.out.println("5. Exit");
+            System.out.println("5. GetMax");
+            System.out.println("6. Exit");
             System.out.print("Masukkan pilihan: ");
             pilihan = sc.nextInt();
             sc.nextLine();
@@ -45,6 +46,9 @@ public class Stack15Main {
                     stk.print();
                     break;
                 case 5:
+                    stk.getMax();
+                    break;
+                case 6:
                     System.out.println("Program selesai.");
                     break;
                 default:
