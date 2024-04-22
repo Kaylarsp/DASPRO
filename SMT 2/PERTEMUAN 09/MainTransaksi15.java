@@ -77,38 +77,45 @@ public class MainTransaksi15 {
             }
             break;
             case 3:
-            System.out.println("=================================================================");
-            System.out.println("Rekening dengan saldo lebih dari 500000");
-            System.out.println("=================================================================");
-            mencariSaldoLebihDari500000(transaksi15s);
+            System.out.println("=========================================================");
+            System.out.println("          Rekening dengan saldo lebih dari 500000");
+            System.out.println("---------------------------------------------------------");
+            System.out.printf("%-12s %-12s %-12s %-12s %n", "Saldo", "Saldo Awal", "Saldo Akhir", "Tanggal transaksi");
+            System.out.println("=========================================================");
+
+            for (Transaksi15 t : transaksi15s) {
+                if (t.saldo > 500000) {
+                    System.out.printf("%-12s %-12s %-12s %-12s %n", t.saldo, t.saldoAwal, t.saldoAkhir, t.tanggalTransaksi, t.type);
+                }
+            }
             break;
             case 4:
-            for (int i = 0; i < Rekening15.length - 1; i++) {
+            for (int i = 0; i < rekening15.length - 1; i++) {
+                boolean swapped = false;
                 for (int j = 0; j < rekening15.length - i - 1; j++) {
                     if (rekening15[j].nama.compareTo(rekening15[j + 1].nama) > 0) {
                         Rekening15 temp = rekening15[j];
                         rekening15[j] = rekening15[j + 1];
                         rekening15[j + 1] = temp;
+                        swapped = true;
                     }
+                }
+                // optimalisasi
+                if (!swapped) {
+                    break;
                 }
             }
             System.out.println(" ");
             System.out.println("Data rekening setelah diurutkan berdasarkan nama:");
-            System.out.println("No Rekening\tNama\t\tNama Ibu\tEmail");
-            for (Rekening09 rekening : rekening09s) {
-                System.out.println(rekening.getnoRekening() + "\t" + rekening.nama + "\t\t" + rekening.namaIbu + "\t" + rekening.getEmail());
+            System.out.println("=============================================================================================================");
+            System.out.printf("%-15s %-12s %-16s %-16s %s%n", "Rekening", "Nama", "Nama Ibu", "No hp" , "Email");
+            System.out.println("=============================================================================================================");
+            for (Rekening15 rekening : rekening15) {
+                System.out.printf("%-15s %-12s %-16s %-16s %s%n", rekening.noRekening, rekening.nama, rekening.namaIbu, rekening.phone, rekening.email);
             }
-    
             break;
-            }
+            case 5:
+            System.exit(0);
         }
-
-        static void mencariSaldoLebihDari500000(Transaksi15[] transaksi15s) {
-            for (Transaksi15 t : transaksi15s) {
-                if (t.saldo > 500000) {
-                    System.out.println(t.saldo + "\t" + t.saldoAwal + "\t" + t.saldoAkhir + "\t\t"
-                            + t.tanggalTransaksi + "\t" + t.type);
-                }
-            }
-        }
+    }
 }
