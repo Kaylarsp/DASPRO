@@ -1,11 +1,11 @@
 public class Main15 {
     public static void main(String[] args) {
         DaftarMahasiswaBerprestasi15 list = new DaftarMahasiswaBerprestasi15();
-        Mahasiswa15 m1 = new Mahasiswa15("Nusa", 2017, 25, 3);
-        Mahasiswa15 m2 = new Mahasiswa15("Rara", 2012, 19, 4);
-        Mahasiswa15 m3 = new Mahasiswa15("Dompu", 2018, 19, 3.5);
-        Mahasiswa15 m4 = new Mahasiswa15("Abdul", 2017, 23, 2);
-        Mahasiswa15 m5 = new Mahasiswa15("Ummi", 2019, 21, 3.75);
+        Mahasiswa15 m1 = new Mahasiswa15(2017, "Nusa", 25, 3);
+        Mahasiswa15 m2 = new Mahasiswa15(2012, "Rara", 19, 4);
+        Mahasiswa15 m3 = new Mahasiswa15(2018, "Dompu", 19, 3.5);
+        Mahasiswa15 m4 = new Mahasiswa15(2017, "Abdul", 23, 2);
+        Mahasiswa15 m5 = new Mahasiswa15(2019, "Ummi", 21, 3.75);
 
         list.tambah(m1);
         list.tambah(m2);
