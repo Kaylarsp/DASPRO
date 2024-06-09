@@ -1,9 +1,11 @@
 public class Graph15 {
     int vertex;
     DoubleLinkedList15 list[];
+    int[][] matriks;
 
     public Graph15(int v) {
         vertex = v;
+        matriks = new int[v][v];
         list = new DoubleLinkedList15[v];
         for (int i = 0; i < v; i++) {
             list[i] =new DoubleLinkedList15();
@@ -81,5 +83,17 @@ public class Graph15 {
             }
         }
         return false;
+    }
+
+    public void updateJarak(int asal, int tujuan, int jarakBaru) {
+        matriks[asal][tujuan] = jarakBaru;
+    }
+
+    public int hitungEdge() {
+        int totalEdge = 0;
+        for (int i = 0; i < vertex; i++) {
+            totalEdge += list[i].size();
+        }
+        return totalEdge;
     }
 }
