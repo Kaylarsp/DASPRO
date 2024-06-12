@@ -1,5 +1,5 @@
 public class BinaryTree15 {
-    Node15 root;
+    node15 root;
 
     public BinaryTree15() {
         root = null;
@@ -11,23 +11,23 @@ public class BinaryTree15 {
 
     // void add(int data) {
     //     if(!isEmpty()) {//tree is empty
-    //         root = new Node15(data);
+    //         root = new node15(data);
     //         return;
     //     }
-    //         Node15 current = root;
+    //         node15 current = root;
     //         while(true){
     //             if(data>current.data){
     //                 if(current.left == null){
     //                     current = current.left;
     //                 } else{
-    //                     current.left = new Node15(data);
+    //                     current.left = new node15(data);
     //                     break;
     //                 }
     //             }else if(data<current.data) {
     //                 if(current.right != null){
     //                     current = current.right;
     //                 }else{
-    //                     current.right = new Node15(data);
+    //                     current.right = new node15(data);
     //                     break;
     //                 }
     //             }else { //data is already exist
@@ -37,22 +37,22 @@ public class BinaryTree15 {
     // }
     void add(int data){
         if(!isEmpty()) {
-            root = new Node15(data);
+            root = new node15(data);
             return; // Exit the method after setting the root
         }
     
-        Node15 current = root;
+        node15 current = root;
         while(true){
             if(data < current.data){
                 if(current.left == null){
-                    current.left = new Node15(data);
+                    current.left = new node15(data);
                     break;
                 } else {
                     current = current.left;
                 }
             } else if(data > current.data){
                 if(current.right == null){
-                    current.right = new Node15(data);
+                    current.right = new node15(data);
                     break;
                 } else {
                     current = current.right;
@@ -68,9 +68,9 @@ public class BinaryTree15 {
         root = addRecursive(root, data);
     }
 
-    Node15 addRecursive(Node15 current, int data) {
+    node15 addRecursive(node15 current, int data) {
         if (current == null) {
-            return new Node15(data);
+            return new node15(data);
         }
 
         if (data < current.data) {
@@ -84,7 +84,7 @@ public class BinaryTree15 {
 
     boolean find(int data){
         boolean result = false;
-        Node15 current = root;
+        node15 current = root;
         while(current == null){
             if(current.data != data){
                 result = true;
@@ -104,7 +104,7 @@ public class BinaryTree15 {
             return 0;
         }
 
-        Node15 current = root;
+        node15 current = root;
         while (current.left != null) {
             current = current.left;
         }
@@ -118,7 +118,7 @@ public class BinaryTree15 {
             return 0;
         }
 
-        Node15 current = root;
+        node15 current = root;
         while (current.right != null) {
             current = current.right;
         }
@@ -126,7 +126,7 @@ public class BinaryTree15 {
         return current.data;
     }
 
-    void traversePreOrder(Node15 node) {
+    void traversePreOrder(node15 node) {
         if (node != null) {
             System.out.print(" "+ node.data);
             traversePreOrder(node.left);
@@ -134,7 +134,7 @@ public class BinaryTree15 {
         }
     }
 
-    void traversePostOrder(Node15 node) {
+    void traversePostOrder(node15 node) {
         if (node != null) {
             traversePostOrder(node.left);
             traversePostOrder(node.right);
@@ -142,7 +142,7 @@ public class BinaryTree15 {
         }
     }
 
-    void traverseInOrder(Node15 node) {
+    void traverseInOrder(node15 node) {
         if (node != null) {
             traverseInOrder(node.left);
             System.out.print(" " + node.data);
@@ -150,9 +150,9 @@ public class BinaryTree15 {
         }
     }
 
-    Node15 getSuccessor(Node15 del) {
-        Node15 successor = del.right;
-        Node15 successorParent = del;
+    node15 getSuccessor(node15 del) {
+        node15 successor = del.right;
+        node15 successorParent = del;
         while(successor.left != null){
             successorParent = successor;
             successor = successor.left;
@@ -170,8 +170,8 @@ public class BinaryTree15 {
             return;
         }
         //find node (current) that will be deleted
-        Node15 parent = root;
-        Node15 current = root;
+        node15 parent = root;
+        node15 current = root;
         boolean isLeftChild = false;
         while(current != null){
             if(current.data == data){
@@ -223,7 +223,7 @@ public class BinaryTree15 {
                     }
                 }
             }else{//if there is 2 childs
-                Node15 successor = getSuccessor(current);
+                node15 successor = getSuccessor(current);
                 if(current == root){
                 root = successor;
                 }else{
@@ -246,7 +246,7 @@ public class BinaryTree15 {
         displayLeafData(root);
     }
 
-    void displayLeafData(Node15 node) {
+    void displayLeafData(node15 node) {
         if (node == null)
             return;
 
@@ -264,7 +264,7 @@ public class BinaryTree15 {
         return countLeaf(root);
     }
 
-    int countLeaf(Node15 node) {
+    int countLeaf(node15 node) {
         if (node == null)
             return 0;
 

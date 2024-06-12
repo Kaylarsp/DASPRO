@@ -1,5 +1,5 @@
 public class LinkedList15 {
-    Node15 head; // head : penunjuk paling depan
+    Node head; // head : penunjuk paling depan
 
     public boolean isEmpty() {
         return (head == null); // mengembalikan nilai true klo head kosong, dan false klo dia udh keisi
@@ -8,7 +8,7 @@ public class LinkedList15 {
     public void print() {
         if (!isEmpty()) {
             System.out.print("Isi linked list: ");
-            Node15 currentNode = head;
+            Node currentNode = head;
 
             while (currentNode != null) {
                 System.out.print(currentNode.data + "\t");
@@ -21,7 +21,7 @@ public class LinkedList15 {
     }
 
     public void addFirst(int input) {
-        Node15 newNode = new Node15(input, null); // bikin node baru
+        Node newNode = new Node(input, null); // bikin node baru
 
         if (isEmpty()) {
             head = newNode; // klo list kosong, node baru jd node pertama dlm list
@@ -32,12 +32,12 @@ public class LinkedList15 {
     }
 
     public void addLast(int input) {
-        Node15 newNode = new Node15(input, null);
+        Node newNode = new Node(input, null);
 
         if (isEmpty()) {
             head = newNode;
         } else {
-            Node15 currentNode = head;
+            Node currentNode = head;
             // perulangan utk mencari node trakhir dlm list
             while (currentNode.next != null) { // perulangan bru berhenti pas currentNode.next nya null, yg artinya dia udh di posisi trahir
                 currentNode = currentNode.next;
@@ -48,10 +48,10 @@ public class LinkedList15 {
     }
 
     public void insertAfter(int key, int input) {
-        Node15 newNode = new Node15(input, null);
+        Node newNode = new Node(input, null);
 
         if (!isEmpty()) {
-            Node15 currentNode = head;
+            Node currentNode = head;
 
             do {
                 if (currentNode.data == key) {
@@ -68,7 +68,7 @@ public class LinkedList15 {
 
     // percobaan 2
     public int getData(int index) {
-        Node15 currentNode = head;
+        Node currentNode = head;
         int currentIndex = 0;
 
         while (currentNode != null && currentIndex < index) {
@@ -86,7 +86,7 @@ public class LinkedList15 {
     }
 
     public int indexOf(int key) {
-        Node15 currentNode = head;
+        Node currentNode = head;
         int index = 0;
 
         while (currentNode != null && currentNode.data != key) {
@@ -115,7 +115,7 @@ public class LinkedList15 {
         } else if (head.next == null) {
             head = null;
         } else {
-            Node15 currentNode = head;
+            Node currentNode = head;
 
             while (currentNode.next != null) {
                 if (currentNode.next.next == null) {
@@ -133,7 +133,7 @@ public class LinkedList15 {
         } else if (head.data == key) {
             removeFirst();;
         } else {
-            Node15 currentNode = head;
+            Node currentNode = head;
     
             while (currentNode.next != null) {
                 if (currentNode.next.data == key) {
@@ -147,7 +147,7 @@ public class LinkedList15 {
 
     // a. insertBefore() method
     public void insertBefore(int key, int input) {
-        Node15 newNode = new Node15(input, null);
+        Node newNode = new Node(input, null);
 
         if (isEmpty()) {
             System.out.println("Linked list kosong");
@@ -158,7 +158,7 @@ public class LinkedList15 {
             return;
         }
         // Traverse
-        Node15 currentNode = head;
+        Node currentNode = head;
         while (currentNode.next != null && currentNode.next.data != key) {
             currentNode = currentNode.next;
         }
@@ -172,7 +172,7 @@ public class LinkedList15 {
 
     // b. insertAt(int index, int key) method
     public void insertAt(int index, int input) {
-        Node15 newNode = new Node15(input, null);
+        Node newNode = new Node(input, null);
     
         if (index < 0) {
             throw new IndexOutOfBoundsException("Index cannot be negative");
@@ -181,7 +181,7 @@ public class LinkedList15 {
         if (index == 0) {
             addFirst(input);
         } else {
-            Node15 currentNode = head;
+            Node currentNode = head;
             int currentIndex = 0;
     
             while (currentNode != null && currentIndex < index - 1) {
@@ -207,7 +207,7 @@ public class LinkedList15 {
         if (index == 0) {
             removeFirst();
         } else {
-            Node15 currentNode = head;
+            Node currentNode = head;
             int currentIndex = 0;
     
             while (currentNode != null && currentIndex < index - 1) {
