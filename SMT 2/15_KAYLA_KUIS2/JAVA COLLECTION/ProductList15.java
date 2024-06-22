@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ProductList {
+public class ProductList15 {
     private ArrayList<Product15> products;
 
-    public ProductList() {
+    public ProductList15() {
         products = new ArrayList<>();
     }
 

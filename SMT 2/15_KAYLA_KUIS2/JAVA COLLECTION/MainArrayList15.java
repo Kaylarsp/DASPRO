@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class MainArrayList {
+public class MainArrayList15 {
     public static void main(String[] args) {
-        ProductList productList = new ProductList();
+        ProductList15 productList = new ProductList15();
 
         productList.add(new Product15("L001", "ASUS Vivobook Pro 14 OLED M3401QA-K420", 15000000));
         productList.add(new Product15("L002", "Lenovo IdeaPad Slim 3i 14ITL6", 6500000));
