@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class ProductList15 {
     private ArrayList<Product15> products;
@@ -32,9 +31,5 @@ public class ProductList15 {
         for (Product15 product : products) {
             System.out.println(product);
         }
-    }
-
-    public void sort() {
-        Collections.sort(products, (p1, p2) -> Double.compare(p1.getPrice(), p2.getPrice()));
     }
 }
